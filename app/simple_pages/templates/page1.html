@@ -1,4 +1,57 @@
 {% extends "base.html" %}
 {% block content %}
     Page 1
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKu>
+    {% block head %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+
+        <title>{% block title %}{% endblock %}This is {{ name }} Website</title>
+    {% endblock %}
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+
+        <div class="col-8">
+            <p> Branches. A git branch is could be compared to PROD, QA, and DEV. The master branch being PROD and all other branches would be considered QA and DEV. The changes made on other branches will not be part of the Master branch unless there is a git pull request.
+            </p>
+            <p>
+                Merge. Git merge will combine the QA or DEV branch with the Master(PROD) branch. All changes that were only on the QA or DEV branch will now show on the Master branch
+            </p>
+            <p>
+                Commit. A git commit is a way of creating a "snapshot" of the existing code including all the changes that were made up to the commit
+            </p>
+            <p>
+                Tags. A git tag is used to tag parts of the repository's history. Thus like commits, the changes made have a comment. Tags used to update the code and mark important points.
+            </p>
+            <p>
+                Repositories. A repository is a folder where all the changes are being stored. When starting a project, you create a repository to upload all code or files into the specific repository. Only the files that are pushed into the repository will be there.
+            </p>
+        </div>
+        <div class="col">
+            
+        </div>
+    </div>
+
+</div>
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhu>
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGy><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3>--><script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+</body>
+</html>
+
 {% endblock %}
